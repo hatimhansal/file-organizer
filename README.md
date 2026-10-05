@@ -1,29 +1,43 @@
-File Organizer
+📁 File Organizer
 
-A simple and lightweight Python tool that automatically organizes files into folders based on their file extensions.
+A simple and lightweight Python tool that automatically organizes files into categorized folders based on their file extensions.
+
+The project was created as a practical Python learning project to understand file handling, filesystem operations, functions, loops, conditions, and Python modules such as "pathlib" and "shutil".
+
+---
 
 📌 Overview
 
-File Organizer helps keep your folders clean and organized by automatically sorting files into categories such as:
+File Organizer scans a selected directory, identifies files by their extensions, and automatically moves them into appropriate category folders.
 
-- Images
-- Videos
-- Documents
-- Code
-- Archives
-- Others
+For example:
 
-The project is built with Python using "pathlib" and "shutil".
+photo.jpg     → Images/
+movie.mp4     → Videos/
+document.pdf  → Documents/
+script.py     → Code/
+archive.zip   → Archives/
+unknown.xyz   → Others/
+
+The goal is to make messy folders easier to manage while practicing real-world Python development.
+
+---
 
 ✨ Features
 
-- Automatically detects file extensions.
-- Organizes files into categorized folders.
-- Supports common image, video, document, code, and archive formats.
-- Creates category folders automatically when needed.
-- Handles files with unknown extensions using an "Others" folder.
-- Prevents filename conflicts by automatically renaming duplicate files.
-- Simple and lightweight.
+- 📂 Automatically organizes files by extension
+- 🖼️ Supports common image formats
+- 🎬 Supports common video formats
+- 📄 Supports common document formats
+- 💻 Supports common programming files
+- 🗜️ Supports common archive formats
+- 📁 Creates category folders automatically
+- ❓ Places unsupported file types in "Others/"
+- 🔄 Prevents filename conflicts by generating unique filenames
+- 🪶 Lightweight and easy to understand
+- 🐍 Built with standard Python libraries
+
+---
 
 🛠️ Technologies
 
@@ -31,53 +45,79 @@ The project is built with Python using "pathlib" and "shutil".
 - "pathlib"
 - "shutil"
 
+No external Python packages are required for the core functionality.
+
+---
+
 📂 Supported File Types
 
 Category| Extensions
-Images| ".jpg", ".jpeg", ".png", ".gif"
-Videos| ".mp4", ".mkv", ".avi"
-Documents| ".pdf", ".docx", ".txt"
-Code| ".py", ".js", ".html", ".css"
-Archives| ".zip", ".rar"
-Others| Other file extensions
+🖼️ Images| ".jpg", ".jpeg", ".png", ".gif"
+🎬 Videos| ".mp4", ".mkv", ".avi"
+📄 Documents| ".pdf", ".docx", ".txt"
+💻 Code| ".py", ".js", ".html", ".css"
+🗜️ Archives| ".zip", ".rar"
+📦 Others| Other or unsupported extensions
+
+«More extensions can be added easily by modifying the project's category configuration.»
+
+---
 
 🚀 How It Works
 
-The program scans a selected folder and checks the extension of each file.
+The program follows a simple process:
 
-For example:
+1. 📂 Selects the folder to organize.
+2. 🔍 Scans the files inside the folder.
+3. 🧩 Checks each file's extension.
+4. 🏷️ Determines the appropriate category.
+5. 📁 Creates the category folder if necessary.
+6. 🚚 Moves the file into the category folder.
+7. 🔄 Generates a new filename if a conflict already exists.
 
-photo.jpg  → Images/
-movie.mp4  → Videos/
-book.pdf   → Documents/
-script.py  → Code/
-archive.zip → Archives/
-unknown.xyz → Others/
-
-If a file with the same name already exists, the program automatically creates a new name:
+Example
 
 photo.jpg
-photo_1.jpg
-photo_2.jpg
 
-▶️ Usage
+becomes:
 
-Clone the repository:
+Images/
+└── photo.jpg
+
+And if "photo.jpg" already exists:
+
+Images/
+├── photo.jpg
+├── photo_1.jpg
+└── photo_2.jpg
+
+---
+
+▶️ Installation & Usage
+
+1. Clone the repository
 
 git clone https://github.com/YOUR_USERNAME/file-organizer.git
+
+2. Enter the project directory
+
 cd file-organizer
 
-Run the program:
+3. Run the program
 
 python main.py
 
-By default, the current version can be configured to organize a folder such as:
+The folder to organize can be configured in the Python source code.
+
+For example:
 
 ~/Videos
 
+---
+
 📁 Example
 
-Before:
+Before
 
 Videos/
 ├── photo.jpg
@@ -86,7 +126,7 @@ Videos/
 ├── script.py
 └── archive.zip
 
-After:
+After
 
 Videos/
 ├── Images/
@@ -100,40 +140,64 @@ Videos/
 └── Archives/
     └── archive.zip
 
-🎯 Project Goal
+---
 
-This project was created as a practical Python project to learn:
+🎯 Project Goals
+
+This project was built as a practical way to learn and practice Python concepts, including:
 
 - "pathlib"
+- "shutil"
 - Lists
 - Dictionaries
 - Functions
 - Loops
 - Conditions
 - File handling
-- Working with the filesystem
-- Using external Python modules
+- Filesystem operations
+- Modules
+- Basic project structure
 
-The goal is to gradually improve the project while learning Python through real-world development.
-
-🔮 Future Improvements
-
-Planned improvements include:
-
-- Command-line arguments
-- Support for more file extensions
-- Custom folder selection
-- Dry-run mode
-- Better error handling
-- Configuration file
-- Logging
-- Undo functionality
-- Interactive CLI interface
-
-👨‍💻 Author
-
-Created by Hatim as a practical Python learning project.
+Instead of learning Python only through exercises, the project focuses on building something useful with real files and directories.
 
 ---
 
-⭐ If you find this project useful, feel free to star the repository.
+🔮 Future Improvements
+
+The project will be gradually improved with features such as:
+
+- [ ] Command-line arguments
+- [ ] Custom folder selection
+- [ ] Support for more file extensions
+- [ ] Dry-run mode
+- [ ] Better error handling
+- [ ] Configuration file
+- [ ] Logging system
+- [ ] Undo functionality
+- [ ] Interactive CLI
+- [ ] Recursive folder organization
+- [ ] Improved cross-platform support
+
+---
+
+📚 Learning Journey
+
+This project is part of my journey to improve my Python programming and build practical software projects.
+
+The project may start simple, but the goal is to progressively improve its structure, reliability, and features while learning new Python concepts.
+
+---
+
+👨‍💻 Author
+
+Hatim
+
+Created as a practical Python learning project.
+
+---
+
+⭐ Support
+
+If you find this project useful or interesting, feel free to ⭐ star the repository.
+
+Feedback and suggestions are welcome!
